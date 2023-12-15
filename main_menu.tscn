@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvsyhh5c7si6x"]
+
+[ext_resource type="Texture2D" uid="uid://com3r3oubfkso" path="res://assest/Flappy Bird Assets/Background/Background1.png" id="1_o5w4g"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_r487k"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_r487k")
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(577.5, 325)
+scale = Vector2(4.48828, 2.53125)
+texture = ExtResource("1_o5w4g")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 358.0
+offset_bottom = 338.0
+text = "PLAY"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
