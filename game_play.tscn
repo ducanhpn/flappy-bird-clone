@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk3u3t5hm6gr5"]
+[gd_scene load_steps=9 format=3 uid="uid://bk3u3t5hm6gr5"]
 
 [ext_resource type="Script" path="res://game_play.gd" id="1_iu34t"]
 [ext_resource type="Texture2D" uid="uid://3qb0o2tv5tst" path="res://assest/Flappy Bird Assets/Background/Background3.png" id="1_jtnrq"]
 [ext_resource type="PackedScene" uid="uid://c6v1li7p154d4" path="res://player.tscn" id="2_s40t5"]
 [ext_resource type="Texture2D" uid="uid://c4f3g18q1wh3n" path="res://assest/Flappy Bird Assets/Tiles/Style 1/SimpleStyle1.png" id="4_w1wed"]
+[ext_resource type="PackedScene" uid="uid://d31n1poilg1hb" path="res://pipe.tscn" id="5_ej7hf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xaunq"]
 size = Vector2(1186, 20)
@@ -210,6 +211,9 @@ text = "Score"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary"]
 position = Vector2(576, -24)
 shape = SubResource("RectangleShape2D_xaunq")
+
+[node name="Pipe" parent="." instance=ExtResource("5_ej7hf")]
+position = Vector2(552, 552)
 
 [node name="Ground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0m7v3")

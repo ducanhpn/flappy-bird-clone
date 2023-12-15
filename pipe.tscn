@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d31n1poilg1hb"]
+
+[ext_resource type="Texture2D" uid="uid://r6c1o1nv4y1d" path="res://assest/Flappy Bird Assets/Tiles/Style 1/PipeStyle1.png" id="1_ahxbl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvu1g"]
+atlas = ExtResource("1_ahxbl")
+region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6cpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvu1g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hx5wq"]
+height = 80.0
+
+[node name="Pipe" type="StaticBody2D"]
+scale = Vector2(2, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r6cpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hx5wq")

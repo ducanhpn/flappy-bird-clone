@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702656402
+::res://::1702665745
 game_play.gd::GDScript::-1::1702651666::0::1::::<>Node2D<>::
-game_play.tscn::PackedScene::3147377083894860176::1702652642::0::1::::<><>::res://game_play.gd<>uid://3qb0o2tv5tst::::res://assest/Flappy Bird Assets/Background/Background3.png<>uid://c6v1li7p154d4::::res://player.tscn<>uid://c4f3g18q1wh3n::::res://assest/Flappy Bird Assets/Tiles/Style 1/SimpleStyle1.png
-main_menu.tscn::PackedScene::6285436005883622437::1702652642::0::1::::<><>::uid://com3r3oubfkso::::res://assest/Flappy Bird Assets/Background/Background1.png<>res://scripts/main_menu.gd
-player.gd::GDScript::-1::1702651698::0::1::::<>RigidBody2D<>::
-player.tscn::PackedScene::6993646208883374567::1702652642::0::1::::<><>::res://player.gd<>uid://clkdcd3umme46::::res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png
+game_play.tscn::PackedScene::3147377083894860176::1702658205::0::1::::<><>::res://game_play.gd<>uid://3qb0o2tv5tst::::res://assest/Flappy Bird Assets/Background/Background3.png<>uid://c6v1li7p154d4::::res://player.tscn<>uid://c4f3g18q1wh3n::::res://assest/Flappy Bird Assets/Tiles/Style 1/SimpleStyle1.png
+main_menu.tscn::PackedScene::6285436005883622437::1702658205::0::1::::<><>::uid://com3r3oubfkso::::res://assest/Flappy Bird Assets/Background/Background1.png<>res://scripts/main_menu.gd
+player.gd::GDScript::-1::1702658202::0::1::::<>RigidBody2D<>::
+player.tscn::PackedScene::6993646208883374567::1702658205::0::1::::<><>::res://player.gd<>uid://clkdcd3umme46::::res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png
 ::res://assest/::1702241881
 ::res://assest/Flappy Bird Assets/::1702241877
 demo-img-1.png::CompressedTexture2D::7893939491401298827::1702241868::1702241877::1::::<><>::
