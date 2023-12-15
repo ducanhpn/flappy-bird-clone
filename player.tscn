@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://clkdcd3umme46" path="res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png" id="1_qtc4v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ahc"]
-radius = 30.0167
+radius = 26.0768
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rn665"]
 atlas = ExtResource("1_qtc4v")
@@ -47,9 +47,12 @@ lock_rotation = true
 script = ExtResource("1_pvwf2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_a7ahc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_8gyq8")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
