@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702595047
-game_play.tscn::PackedScene::3147377083894860176::1702489680::0::1::::<><>::uid://3qb0o2tv5tst::::res://assest/Flappy Bird Assets/Background/Background3.png<>uid://3cv5b4mbucmc::::res://player.tscn
-main_menu.tscn::PackedScene::6285436005883622437::1702245491::0::1::::<><>::uid://com3r3oubfkso
-player.tscn::PackedScene::1970745105908297362::1702490619::0::1::::<><>::res://scripts/player.gd<>uid://clkdcd3umme46::::res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png
+::res://::1702649702
+game_play.gd::GDScript::-1::1702597748::0::1::::<>Node2D<>::
+game_play.tscn::PackedScene::3147377083894860176::1702597759::0::1::::<><>::res://game_play.gd<>uid://3qb0o2tv5tst::::res://assest/Flappy Bird Assets/Background/Background3.png<>uid://c6v1li7p154d4::::res://player.tscn
+main_menu.tscn::PackedScene::6285436005883622437::1702597759::0::1::::<><>::uid://com3r3oubfkso::::res://assest/Flappy Bird Assets/Background/Background1.png<>res://scripts/main_menu.gd
+player.gd::GDScript::-1::1702597158::0::1::::<>RigidBody2D<>::
+player.tscn::PackedScene::6993646208883374567::1702597759::0::1::::<><>::res://player.gd<>uid://clkdcd3umme46::::res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png
 ::res://assest/::1702241881
 ::res://assest/Flappy Bird Assets/::1702241877
 demo-img-1.png::CompressedTexture2D::7893939491401298827::1702241868::1702241877::1::::<><>::
@@ -61,6 +63,6 @@ TileStyle4.png::CompressedTexture2D::1887819431955037755::1702241868::1702241877
 PipeStyle5.png::CompressedTexture2D::1484871407058212423::1702241868::1702241877::1::::<><>::
 SimpleStyle5.png::CompressedTexture2D::7783323195511655099::1702241868::1702241877::1::::<><>::
 TileStyle5.png::CompressedTexture2D::4060904953479003529::1702241868::1702241877::1::::<><>::
-::res://scripts/::1702489731
+::res://flappy-bird-clone/::1702648771
+::res://scripts/::1702595401
 main_menu.gd::GDScript::-1::1702243093::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1702489731::0::1::::<>Node2D<>::
