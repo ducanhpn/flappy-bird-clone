@@ -1,0 +1,5 @@
+res://main_menu.tscn
+res://game_play.tscn
+res://player.tscn
+res://player.gd
+res://game_play.gd
