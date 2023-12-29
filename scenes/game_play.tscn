@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk3u3t5hm6gr5"]
+
+[ext_resource type="Script" path="res://scripts/game_play.gd" id="1_b0jo1"]
+[ext_resource type="PackedScene" uid="uid://c6v1li7p154d4" path="res://scenes/player.tscn" id="2_s40t5"]
+[ext_resource type="PackedScene" uid="uid://khktrutp4klx" path="res://scenes/obstacle.tscn" id="4_jjjga"]
+[ext_resource type="PackedScene" uid="uid://sn6fft63wxf5" path="res://scenes/level.tscn" id="5_prb7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xaunq"]
+size = Vector2(1186, 20)
+
+[node name="GamePlay" type="Node2D"]
+script = ExtResource("1_b0jo1")
+
+[node name="Player" parent="." instance=ExtResource("2_s40t5")]
+position = Vector2(232, 248)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 144.0
+offset_bottom = 72.0
+text = "Score"
+
+[node name="Boundary" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary"]
+position = Vector2(576, -24)
+shape = SubResource("RectangleShape2D_xaunq")
+
+[node name="level" parent="." instance=ExtResource("5_prb7c")]
+
+[node name="obstacle" parent="." instance=ExtResource("4_jjjga")]
+position = Vector2(640, 0)

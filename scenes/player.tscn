@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6v1li7p154d4"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_pvwf2"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_nw1tq"]
 [ext_resource type="Texture2D" uid="uid://clkdcd3umme46" path="res://assest/Flappy Bird Assets/Player/StyleBird1/Bird1-3.png" id="1_qtc4v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ahc"]
@@ -44,7 +44,7 @@ animations = [{
 
 [node name="Player" type="RigidBody2D"]
 lock_rotation = true
-script = ExtResource("1_pvwf2")
+script = ExtResource("1_nw1tq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)

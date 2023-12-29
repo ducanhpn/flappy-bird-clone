@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://khktrutp4klx"]
+
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_d8sj2"]
+[ext_resource type="Texture2D" uid="uid://r6c1o1nv4y1d" path="res://assest/Flappy Bird Assets/Tiles/Style 1/PipeStyle1.png" id="2_e8a03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tq2ab"]
+size = Vector2(80, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvu1g"]
+atlas = ExtResource("2_e8a03")
+region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6cpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvu1g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hx5wq"]
+height = 80.0
+
+[node name="Obstacle" type="Node2D"]
+script = ExtResource("1_d8sj2")
+
+[node name="DetectArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea2D"]
+shape = SubResource("RectangleShape2D_tq2ab")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="DetectArea2D"]
+offset_left = -40.0
+offset_top = -49.0
+offset_right = 40.0
+offset_bottom = 49.0
+color = Color(0.427451, 0, 0.109804, 1)
+
+[node name="PipeUp" type="StaticBody2D" parent="."]
+scale = Vector2(2, 1)
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PipeUp"]
+sprite_frames = SubResource("SpriteFrames_r6cpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeUp"]
+shape = SubResource("CapsuleShape2D_hx5wq")
+
+[node name="PipeDown" type="StaticBody2D" parent="."]
+scale = Vector2(2, 1)
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PipeDown"]
+sprite_frames = SubResource("SpriteFrames_r6cpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeDown"]
+shape = SubResource("CapsuleShape2D_hx5wq")
+
+[connection signal="body_entered" from="DetectArea2D" to="." method="_on_area_2d_body_entered"]

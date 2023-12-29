@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Flappy Bird Clone"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+
+[autoload]
+
+DataStorage="*res://scripts/data_storage.gd"
 
 [input]
 

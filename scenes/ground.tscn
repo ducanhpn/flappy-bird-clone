@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2rg8yrnu303l"]
+
+[ext_resource type="Texture2D" uid="uid://c4f3g18q1wh3n" path="res://assest/Flappy Bird Assets/Tiles/Style 1/SimpleStyle1.png" id="1_xcorc"]
+[ext_resource type="Script" path="res://scenes/ground.gd" id="2_qpcga"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua2nb"]
+atlas = ExtResource("1_xcorc")
+region = Rect2(0, 80, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81ya1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua2nb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skxfs"]
+size = Vector2(81, 31.5)
+
+[node name="Ground" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_81ya1")
+script = ExtResource("2_qpcga")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="GroundCollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_skxfs")
